@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Nós </title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="logo"><strong>VERCELLI </strong><br> RISTORANTE ITALIANO</div>
+
+    <nav>
+      <ul>
+        <li><a class="botão-reserva" href="#inicio">INÍCIO</a></li>
+        <li><a href="#sobre">SOBRE NÓS</a></li>
+        <li><a href="#cardapio">CARDÁPIO</a></li>
+        <li><a href="#reservas">RESERVAS</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<!--INICIO-->
+  <main id="inicio" class="inicio">
+    <div class="inicio-conteudo">
+      <h1>A Itália</h1>
+      <h1 >na sua mesa.</h1>
+      <p>Receitas tradicionais do Piemonte, massas artesanais e um forno a lenha que aquece cada prato com a alma da cozinha italiana.</p>
+      <a href="#reservas" class="botao-reserva">RESERVAR MESA</a>
+      <a href="#cardapio" class="botao-reserva">CONFIRA O CARDÁPIO</a>
+    </div>
+  </main>
+
+
+<!-- SOBRE NÓS -->
+
+  <div id="sobre" class="sobre">
+    <section>
+      <h4>Sobre Nós</h4>
+      <h1>Três gerações de <br> sabor e tradição</h1>
+      <p><strong>Fundado em 1987 pela família Vercelli, trouxemos do Piemonte as <br> receitas da Nonna Maria — aquelas que ficam na
+      memória e no coração. <br>Cada prato é preparado com ingredientes importados diretamente da Itália.<br></strong>
+      Nossa cozinha é aberta e transparente: você vê a massa sendo feita, <br> sente o aroma do forno a lenha e ouve a
+      tradição em cada detalhe do ambiente.</p>
+
+    <div class="h4">
+      <h4><strong>+ de 30</strong> <br> anos de tradição</h4>
+      <h4><strong>2.400</strong> <br> pratos por semana</h4>
+      <h4><strong>98%</strong> de <br> satisfação</h4>
+    </div>
+    </section>
+
+    <img src="sobrenós.avif" alt="Imagem do restaurante">
+  </div>
+
+
+<!--  RESERVAS -->
+  <section id="reservas" class="secao-reservas">
+      <div class="reservas-conteudo">
+        <p class="rotulo-secao">Reservas</p>
+        <h2 class="reservas-titulo">Reserve sua <em>experiência</em></h2>
+        <span class="linha-divisoria linha-clara"></span>
+
+        <form class="formulario-reserva">
+          <div class="linha-formulario">
+            <input type="text" name="nome" placeholder="Seu nome" required>
+            <input type="tel" name="telefone" placeholder="Telefone / WhatsApp" required>
+          </div>
+          <div class="linha-formulario">
+            <input type="date" name="data">
+            <select name="pessoas" required>
+              <option value="" disabled selected>Número de pessoas</option>
+              <option value="1">1 pessoa</option>
+              <option value="2">2 pessoas</option>
+              <option value="3">3 pessoas</option>
+              <option value="4">4 pessoas</option>
+              <option value="5+">5 ou mais pessoas</option>
+            </select>
+          </div>
+          <textarea name="observacoes" placeholder="Observações ou pedidos especiais..." rows="4"></textarea>
+
+          <button class="botao-reserva">Confirmar Reserva</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!--RODAPÉ-->
+  <footer id="contato" class="rodape">
+    <div class="rodape-colunas">
+
+      <div class="rodape-coluna">
+        <span class="logo-nome">VERCELLI</span>
+        <span class="logo-subtitulo">Ristorante Italiano</span>
+        <p class="rodape-descricao">
+          Tradição italiana desde 1987. Massas artesanais, ingredientes
+          selecionados e uma hospitalidade que vem do coração do Piemonte.
+        </p>
+      </div>
+
+      <div class="rodape-coluna">
+        <h3 class="rodape-titulo">Horários</h3>
+        <p>Terça – Quinta: 12h–15h, 19h–23h</p>
+        <p>Sexta – Sábado: 12h–16h, 19h–00h</p>
+        <p>Domingo: 12h–17h</p>
+        <p class="rodape-fechado">Segunda: Fechado</p>
+      </div>
+
+      <div class="rodape-coluna">
+        <h3 class="rodape-titulo">Contato</h3>
+        <p>Rua Visconde de Pirajá, 400</p>
+        <p>Oscar Freire, São Paulo - SP</p>
+        <p>(11) 4002-8922</p>
+        <p>contato@vercelli.com.br</p>
+      </div>
+    </div>
+
+    <div class="rodape-base">
+      <p>&copy; 2026 Vercelli Ristorante.</p>
+      <div class="redes-sociais">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">Tripadvisor</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
