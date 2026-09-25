@@ -1,16 +1,15 @@
 * { 
-margin: 0; 
-padding: 0; 
-box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
 }
 
 body { 
-font-family: 'Poppins', sans-serif;
-background-color: #F5EEDB; 
-color: #444412;
-grid-template-columns: 1fr 1fr;
-column-gap: 20px;
-padding: 0 60px 60px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #F5EEDB; 
+  color: #444412;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
 }
 
 .h4{
@@ -34,7 +33,7 @@ header{
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  padding: 2%;
+  padding: 40px 40px;
   position: fixed;
 
   nav ul{
@@ -49,17 +48,59 @@ header{
     grid-column: 2;}
 }
 
-  p{
-    font-size: 20px;
-    font-weight: 400;
-    font-family: 'Poppins', sans-serif;
-  }
+.inicio{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-position: center;
+  letter-spacing: 1px;
+  background-image: linear-gradient(rgba(10, 7, 6, 0.75), rgba(10, 7, 6, 0.85)), url('fundoreserva.avif');
+  background-size: cover;
+  background-position: center;
+}
 
+.inicio-conteudo{
+  max-width: 700px;
+  width: 100%;
+  padding: 0 60px;
+  gap: 20px;
+  padding-top: 12px 24px;
+  letter-spacing: 0.5px;
+}
+
+.inicio-conteudo h1{
+  font-size: 100px;
+  line-height: 1.2;
+  color:#950606
+}
+
+.inicio-conteudo p{
+  font-size: 20px;
+  font-weight: 10;
+  font-family: poppins;
+  color:#F5EEDB
+}
+
+.botao-reserva{
+  margin-top: 30px;
+  display: inline-block;
+  text-align: none;
+}
+
+p{
+  font-size: 20px;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+}
 
 .logo{
-  width: 150px;
-  height: 100px;
+  width: 250px;
+  height: 200px;
   border-radius: 50%;
+  color: #950606;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.4rem;
 }
 
 section{
@@ -72,9 +113,130 @@ section{
   padding-bottom: 10%;
 }
 
-.img{
+.sobre{
   display: flex;
   align-items: center;
   gap: 15px;
+  padding: 0 60px;
+}
 
+.reservas-conteudo {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.reservas-titulo {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+}
+
+.linha-divisoria.linha-clara {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.formulario-reserva {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  text-align: left;
+}
+
+.linha-formulario {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.formulario-reserva input,
+.formulario-reserva select,
+.formulario-reserva textarea {
+  flex: 1 1 220px;
+  background-color: transparent;
+  border: 1px solid;
+  border-color: #444412;
+  border-radius: 4px;
+  padding: 0.9rem 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+}
+
+.formulario-reserva ::placeholder {
+  color: #444412;
+}
+
+.botao-reserva {
+  background-color: #950606;
+  color: #F5EEDB;
+  border: none;
+  border-radius: 4px;
+  padding: 0.9rem 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.rodape {
+  background-color: #444412;
+  padding: 2rem;
+  color: #F5EEDB;
+}
+
+.logo-nome {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'times new roman', serif
+}
+
+.logo-subtitulo {
+  font-size: 1.25rem;
+  color:#950606;
+}
+
+.rodape-colunas {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  padding-bottom: 2.5rem;
+}
+
+.rodape-coluna {
+  flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.rodape-descricao {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.rodape-coluna p {
+  font-size: 0.9rem;
+}
+
+.rodape-base {
+  max-width: 1200px;
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color:#F5EEDB;
+}
+
+.redes-sociais {
+  display: flex;
+  gap: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }

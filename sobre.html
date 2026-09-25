@@ -15,20 +15,33 @@
 
 <body>
   <header>
-    <img class="logo" src="logo.jpeg" alt="Logo do Restaurante">
+    <div class="logo"><strong>VERCELLI </strong><br> RISTORANTE ITALIANO</div>
 
     <nav>
       <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="sobre.html">Sobre Nós</a></li>
-        <li><a href="cardapio.html">Cardápio</a></li>
-        <li><a href="reservas.html">Reservas</a></li>
-        <li><a href="avaliacoes.html">Avaliações</a></li>
+        <li><a class="botão-reserva" href="#inicio">INÍCIO</a></li>
+        <li><a href="#sobre">SOBRE NÓS</a></li>
+        <li><a href="#cardapio">CARDÁPIO</a></li>
+        <li><a href="#reservas">RESERVAS</a></li>
       </ul>
     </nav>
   </header>
 
-  <div class="img">
+<!--INICIO-->
+  <main id="inicio" class="inicio">
+    <div class="inicio-conteudo">
+      <h1>A Itália</h1>
+      <h1 >na sua mesa.</h1>
+      <p>Receitas tradicionais do Piemonte, massas artesanais e um forno a lenha que aquece cada prato com a alma da cozinha italiana.</p>
+      <a href="#reservas" class="botao-reserva">RESERVAR MESA</a>
+      <a href="#cardapio" class="botao-reserva">CONFIRA O CARDÁPIO</a>
+    </div>
+  </main>
+
+
+<!-- SOBRE NÓS -->
+
+  <div id="sobre" class="sobre">
     <section>
       <h4>Sobre Nós</h4>
       <h1>Três gerações de <br> sabor e tradição</h1>
@@ -47,4 +60,78 @@
     <img src="sobrenós.avif" alt="Imagem do restaurante">
   </div>
 
+
+<!--  RESERVAS -->
+  <section id="reservas" class="secao-reservas">
+      <div class="reservas-conteudo">
+        <p class="rotulo-secao">Reservas</p>
+        <h2 class="reservas-titulo">Reserve sua <em>experiência</em></h2>
+        <span class="linha-divisoria linha-clara"></span>
+
+        <form class="formulario-reserva">
+          <div class="linha-formulario">
+            <input type="text" name="nome" placeholder="Seu nome" required>
+            <input type="tel" name="telefone" placeholder="Telefone / WhatsApp" required>
+          </div>
+          <div class="linha-formulario">
+            <input type="date" name="data">
+            <select name="pessoas" required>
+              <option value="" disabled selected>Número de pessoas</option>
+              <option value="1">1 pessoa</option>
+              <option value="2">2 pessoas</option>
+              <option value="3">3 pessoas</option>
+              <option value="4">4 pessoas</option>
+              <option value="5+">5 ou mais pessoas</option>
+            </select>
+          </div>
+          <textarea name="observacoes" placeholder="Observações ou pedidos especiais..." rows="4"></textarea>
+
+          <button class="botao-reserva">Confirmar Reserva</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!--RODAPÉ-->
+  <footer id="contato" class="rodape">
+    <div class="rodape-colunas">
+
+      <div class="rodape-coluna">
+        <span class="logo-nome">VERCELLI</span>
+        <span class="logo-subtitulo">Ristorante Italiano</span>
+        <p class="rodape-descricao">
+          Tradição italiana desde 1987. Massas artesanais, ingredientes
+          selecionados e uma hospitalidade que vem do coração do Piemonte.
+        </p>
+      </div>
+
+      <div class="rodape-coluna">
+        <h3 class="rodape-titulo">Horários</h3>
+        <p>Terça – Quinta: 12h–15h, 19h–23h</p>
+        <p>Sexta – Sábado: 12h–16h, 19h–00h</p>
+        <p>Domingo: 12h–17h</p>
+        <p class="rodape-fechado">Segunda: Fechado</p>
+      </div>
+
+      <div class="rodape-coluna">
+        <h3 class="rodape-titulo">Contato</h3>
+        <p>Rua Visconde de Pirajá, 400</p>
+        <p>Oscar Freire, São Paulo - SP</p>
+        <p>(11) 4002-8922</p>
+        <p>contato@vercelli.com.br</p>
+      </div>
+    </div>
+
+    <div class="rodape-base">
+      <p>&copy; 2026 Vercelli Ristorante.</p>
+      <div class="redes-sociais">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">Tripadvisor</a>
+      </div>
+    </div>
+  </footer>
+
 </body>
+</html>
