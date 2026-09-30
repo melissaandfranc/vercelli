@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio</title>
+    <link rel="stylesheet" href="cardapiostyle.css">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="../imagens/logo.jpeg" alt="Logo do restaurante">
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="cardapio.html">Cardápio</a></li>
+                <li><a href="reservas.html">Reservas</a></li>
+                <li><a href="avaliacoes.html">Avaliações</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="cardapio">
+        <h4>Cardápio do nosso restaurante:</h4>
+        <h1>Breve descrição</h1>
+        <p><strong>Cada prato conta uma história de 3 gerações.</strong> <br>
+        Massas frescas, ingredientes importados e receitas que atravessam o tempo.</p>
+    </section>
+
+    <nav class="categoria-nav" aria-label="Atalhos de categorias">
+        <a href="#entradas">Entradas</a>
+        <a href="#massas">Massas</a>
+        <a href="#principais">Pratos Principais</a>
+        <a href="#sobremesas">Sobremesas</a>
+    </nav>
+
+    <div class="cardapio-lista">
+
+        <section class="categoria" id="entradas">
+            <h2>Entradas</h2>
+
+            <article class="prato">
+                <img src="../imagens/prato-bruschetta.jpg" alt="Bruschetta al Pomodoro" loading="lazy">
+
+                <div class="prato-info">
+                    <div class="prato-cabecalho">
+                        <h3 class="prato-nome" role="button" tabindex="0" aria-expanded="false">Bruschetta al Pomodoro</h3>
+                        <span class="prato-preco">R$ 32</span>
+                    </div>
+
+                    <div class="detalhes">
+                        <p class="resumo">Pão italiano tostado coberto com tomate fresco e manjericão.</p>
+
+                        <p class="rotulo">A base</p>
+                        <p>Fatias de pão rústico tostadas na brasa e esfregadas com alho fresco.</p>
+
+                        <p class="rotulo">A cobertura</p>
+                        <p>Tomates maduros picados em cubos, temperados com manjericão fresco, azeite extravirgem, sal e um toque de vinagre balsâmico.</p>
+
+                        <p class="rotulo">Finalização</p>
+                        <p>Finalizada com um fio de azeite e lascas de Parmigiano Reggiano.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="prato">
+                <img src="../imagens/prato-carpaccio.jpg" alt="Carpaccio di Manzo" loading="lazy">
+
+                <div class="prato-info">
+                    <div class="prato-cabecalho">
+                        <h3 class="prato-nome" role="button" tabindex="0" aria-expanded="false">Carpaccio di Manzo</h3>
+                        <span class="prato-preco">R$ 48</span>
+                    </div>
+
+                    <div class="detalhes">
+                        <p class="resumo">Finas fatias de carne bovina crua com molho especial.</p>
+
+                        <p class="rotulo">A carne</p>
+                        <p>Filé mignon fatiado extremamente fino, quase translúcido, servido gelado.</p>
+
+                        <p class="rotulo">O molho</p>
+                        <p>Regado com molho de mostarda Dijon, azeite extravirgem e suco de limão siciliano.</p>
+
+                        <p class="rotulo">Finalização</p>
+                        <p>Coberto com rúcula fresca, alcaparras e lascas de Parmigiano Reggiano.</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="categoria" id="massas">
+            <h2>Massas</h2>
+
+            <article class="prato">
+                <img src="../imagens/prato1.jpg" alt="Tagliatelle al Ragù" loading="lazy">
+
+                <div class="prato-info">
+                    <div class="prato-cabecalho">
+                        <h3 class="prato-nome" role="button" tabindex="0" aria-expanded="false">Tagliatelle al Ragù</h3>
+                        <span class="prato-preco">R$ 58</span>
+                    </div>
+
+                    <div class="detalhes">
+                        <p class="resumo">Massa fresca artesanal com molho de carne cozido lentamente.</p>
+
+                        <p class="rotulo">A massa</p>
+                        <p>O tagliatelle é uma massa de ovos achatada e em formato de fita, ideal para reter molhos densos.</p>
+
+                        <p class="rotulo">O molho</p>
+                        <p>Ragù tradicionalmente feito com carne bovina (ou suína/pancetta), vegetais picados finamente (cebola, cenoura e aipo, conhecidos como soffritto), vinho e tomate ou passata, cozido em fogo muito baixo até ficar extremamente macio e saboroso.</p>
+
+                        <p class="rotulo">Finalização</p>
+                        <p>Servido com queijo Parmigiano Reggiano ralado na hora.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="prato">
+                <img src="../imagens/prato-carbonara.jpg" alt="Spaghetti alla Carbonara" loading="lazy">
+
+                <div class="prato-info">
+                    <div class="prato-cabecalho">
+                        <h3 class="prato-nome" role="button" tabindex="0" aria-expanded="false">Spaghetti alla Carbonara</h3>
+                        <span class="prato-preco">R$ 54</span>
+                    </div>
+
+                    <div class="detalhes">
+                        <p class="resumo">Massa clássica romana com ovos, queijo e guanciale.</p>
+
+                        <p class="rotulo">A massa</p>
+                        <p>Spaghetti al dente, cozido em água generosamente salgada.</p>
+
+                        <p class="rotulo">O molho</p>
+                        <p>Creme feito apenas com gemas de ovo, queijo Pecorino Romano e pimenta-do-reino, emulsionado fora do fogo com a água da massa — sem uso de creme de leite.</p>
+
+                        <p class="rotulo">Finalização</p>
+                        <p>Guanciale crocante e mais Pecorino Romano ralado na hora.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="prato">
+                <img src="../imagens/prato-lasagna.jpg" alt="Lasagna alla Bolognese" loading="lazy">
+
+                <div class="prato-info">
+                    <div class="prato-cabecalho">
+                        <h3 class="prato-nome" role="button" tabindex="0" aria-expanded="false">Lasagna alla Bolognese</h3>
+                        <span class="prato-preco">R$ 56</span>
+                    </div>
+
+                    <div class="detalhes">
+                        <p class="resumo">Camadas de massa fresca, ragù bolonhesa e molho bechamel.</p>
+
+                        <p class="rotulo">A massa</p>
+                        <p>Folhas de massa fresca ao ovo, montadas em camadas finas.</p>
+
+                        <p class="rotulo">O recheio</p>
+                        <p>Ragù bolonhesa intercalado com molho bechamel cremoso e queijo Parmigiano Reggiano.</p>
+
+                        <p class="rotulo">Finalização</p>
+                        <p>Gratinada no forno até dourar por cima.</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="categoria" id="principais">
+            <h2>Pratos Principais</h2>
+
+            <article class="prato">
+                <img src="../imagens/prato-ossobuco.jpg" alt="Osso Buco alla Milanese" loading="lazy">
+
+                <div class="prato-info">
+                    <div class="prato-cabecalho">
+                        <h3 class="prato-nome" role="button" tabindex="0" aria-expanded="false">Osso Buco alla Milanese</h3>
+                        <span class="prato-preco">R$ 89</span>
+                    </div>
+
+                    <div class="detalhes">
+                        <p class="resumo">Jarrete de vitela braseado lentamente em vinho branco.</p>
+
+                        <p class="rotulo">A carne</p>
+                        <p>Corte transversal do jarrete de vitela, com o osso e a medula preservados.</p>
+
+                        <p class="rotulo">O preparo</p>
+                        <p>Braseado por horas em vinho branco, caldo, tomate e vegetais, até ficar extremamente macio.</p>
+
+                        <p class="rotulo">Finalização</p>
+                        <p>Servido com gremolata (raspas de limão, alho e salsinha) e risoto de açafrão.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="prato">
+                <img src="../imagens/prato-saltimbocca.jpg" alt="Saltimbocca alla Romana" loading="lazy">
+
+                <div class="prato-info">
+                    <div class="prato-cabecalho">
+                        <h3 class="prato-nome" role="button" tabindex="0" aria-expanded="false">Saltimbocca alla Romana</h3>
+                        <span class="prato-preco">R$ 76</span>
+                    </div>
+
+                    <div class="detalhes">
+                        <p class="resumo">Escalopes de vitela com presunto cru e sálvia.</p>
+
+                        <p class="rotulo">A carne</p>
+                        <p>Fatias finas de vitela, cobertas com presunto cru (prosciutto) e uma folha de sálvia fresca.</p>
+
+                        <p class="rotulo">O preparo</p>
+                        <p>Selado na manteiga e finalizado com um molho rápido de vinho branco.</p>
+
+                        <p class="rotulo">Finalização</p>
+                        <p>Servido com o próprio molho da panela por cima.</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="categoria" id="sobremesas">
+            <h2>Sobremesas</h2>
+
+            <article class="prato">
+                <img src="../imagens/prato2.jpg" alt="Tiramisù" loading="lazy">
+
+                <div class="prato-info">
+                    <div class="prato-cabecalho">
+                        <h3 class="prato-nome" role="button" tabindex="0" aria-expanded="false">Tiramisù</h3>
+                        <span class="prato-preco">R$ 28</span>
+                    </div>
+
+                    <div class="detalhes">
+                        <p class="resumo">Sobremesa clássica italiana com café e mascarpone.</p>
+
+                        <p class="rotulo">A base</p>
+                        <p>Biscoitos champagne embebidos em café espresso fresco.</p>
+
+                        <p class="rotulo">O creme</p>
+                        <p>Creme de mascarpone batido com gemas, açúcar e um toque de licor.</p>
+
+                        <p class="rotulo">Finalização</p>
+                        <p>Finalizada com cacau em pó peneirado na hora de servir.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="prato">
+                <img src="../imagens/prato-pannacotta.jpg" alt="Panna Cotta" loading="lazy">
+
+                <div class="prato-info">
+                    <div class="prato-cabecalho">
+                        <h3 class="prato-nome" role="button" tabindex="0" aria-expanded="false">Panna Cotta</h3>
+                        <span class="prato-preco">R$ 26</span>
+                    </div>
+
+                    <div class="detalhes">
+                        <p class="resumo">Creme de leite cozido, macio e delicado.</p>
+
+                        <p class="rotulo">O preparo</p>
+                        <p>Creme de leite fresco cozido com açúcar e baunilha, levemente gelatinizado até obter textura sedosa.</p>
+
+                        <p class="rotulo">A calda</p>
+                        <p>Servida com calda de frutas vermelhas frescas.</p>
+
+                        <p class="rotulo">Finalização</p>
+                        <p>Decorada com folhas de hortelã.</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+    </div>
+
+    <script src="cardapio.js"></script>
+</body>
+</html>
