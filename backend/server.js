@@ -24,6 +24,33 @@ const PORTA = 3000;
 // Permite ler dados em JSON enviados pelo front
 app.use(express.json());
 
+const rateLimit = require("express-rate-limit");
+
+// Reservas: no máximo 3 envios por hora para cada pessoa (IP)
+const limiteReservas = rateLimit({
+  windowMs: 60 * 60 * 1000,
+  limit: 3,
+  skipFailedRequests: true, // recusas de validação (400) não contam
+  standardHeaders: "draft-7",
+  legacyHeaders: false,
+  message: {
+    ok: false,
+    mensagem: "Você atingiu o limite de reservas por hora. Para mais mesas, ligue para (11) 4002-8922.",
+  },
+});
+
+// Admin: só conta as tentativas que falham (senha errada)
+const limiteAdmin = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  limit: 30,
+  skipSuccessfulRequests: true,
+  standardHeaders: "draft-7",
+  legacyHeaders: false,
+  message: "Muitas tentativas de login. Aguarde alguns minutos.",
+});
+
+app.use("/api/reservas", limiteReservas);
+
 // Serve o seu site (HTML, CSS, JS, imagens) pelo servidor
 app.use(
   express.static(path.join(__dirname, "..", "Vercelli", "Completo"), {
@@ -133,7 +160,7 @@ function autenticar(req, res, next) {
   res.status(401).send("Acesso restrito.");
 }
 
-app.use(["/admin", "/api/admin"], autenticar);
+app.use(["/admin", "/api/admin"], limiteAdmin, autenticar);
 
 app.get("/admin", (req, res) => {
   res.sendFile(path.join(__dirname, "admin.html"));
