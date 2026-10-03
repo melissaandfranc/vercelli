@@ -1,3 +1,260 @@
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+body { 
+  font-family: 'Poppins', sans-serif;
+  background-color: #F5EEDB; 
+  color: #444412;
+}
+
+.estatisticas{
+  display: flex;
+  gap: 40px;
+  font-size: 20px;
+  font-weight: 400;
+  color:#950606
+}
+
+h1{
+  font-size: 50px;
+  font-weight: 700;
+  font-family: 'times new roman', serif;
+}
+
+header{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 20px 40px;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background-color: #F5EEDB;
+
+  nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 34px;
+    list-style: none;
+    padding: 16px 20px;
+    grid-column: 2;}
+}
+
+.inicio{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(rgba(10, 7, 6, 0.75), rgba(10, 7, 6, 0.85)), url('imagens/fundoreserva.avif');
+  background-size: cover;
+  background-position: center;
+}
+
+.inicio-conteudo{
+  max-width: 700px;
+  width: 100%;
+  padding: 0 60px;
+  letter-spacing: 0.5px;
+}
+
+.inicio-conteudo h1{
+  font-size: 100px;
+  line-height: 1.2;
+  color:#950606
+}
+
+.inicio-conteudo p{
+  font-size: 20px;
+  font-weight: 10;
+  color:#F5EEDB
+}
+
+p{
+  font-size: 20px;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+}
+
+.logo{
+  width: 250px;
+  height: auto;
+  color: #950606;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.4rem;
+}
+
+li a{
+  color:#950606;
+}
+
+section{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.sobre{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 0 60px;
+}
+
+.reservas-conteudo {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.reservas-titulo {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+}
+
+.linha-divisoria {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.formulario-reserva {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  text-align: left;
+}
+
+.linha-formulario {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.formulario-reserva input,
+.formulario-reserva select,
+.formulario-reserva textarea {
+  flex: 1 1 220px;
+  background-color: transparent;
+  border: 1px solid;
+  border-color: #444412;
+  border-radius: 4px;
+  padding: 0.9rem 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+}
+
+.formulario-reserva ::placeholder {
+  color: #444412;
+}
+
+.botao-reserva {
+  background-color: #950606;
+  color: #F5EEDB;
+  border: none;
+  border-radius: 4px;
+  padding: 0.9rem 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-top: 30px;
+  display: inline-block;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6) ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-caixa {
+  position: relative; 
+  background-color: #F5EEDB;
+  color: #444412;
+  padding: 2rem 3rem;
+  border-radius: 8px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  max-width: 90%;
+}
+
+.modal-fechar {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.75rem;
+  font-size: 1.8rem;
+  color: #000000;
+  cursor: pointer;
+}
+
+.modal[hidden] {
+  display: none;
+}
+
+.rodape {
+  background-color: #444412;
+  padding: 2rem;
+  color: #F5EEDB;
+}
+
+.logo-nome {
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'times new roman', serif
+}
+
+.logo-subtitulo {
+  font-size: 1.25rem;
+  color:#950606;
+}
+
+.rodape-colunas {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  padding-bottom: 2.5rem;
+}
+
+.rodape-coluna {
+  flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.rodape-descricao {
+  margin-top: 0.5rem;
+}
+
+.rodape-coluna p {
+  font-size: 0.9rem;
+}
+
+.rodape-base {
+  max-width: 1200px;
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.8rem;
+}
+
+/* ================= CARDÁPIO ================= */
 /* Cardápio integrado ao site. Carregar DEPOIS do style.css.
    Tudo escopado em #cardapio para não vazar para o resto da página. */
 
