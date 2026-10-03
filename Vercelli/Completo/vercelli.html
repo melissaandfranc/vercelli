@@ -282,7 +282,7 @@
             <input type="tel" name="telefone" placeholder="Telefone / WhatsApp" required>
           </div>
           <div class="linha-formulario">
-            <input type="date" name="data">
+            <input type="date" name="data" required>
             <select name="pessoas" required>
               <option value=""disabled selected >Número de pessoas</option>
               <option value="1">1 pessoa</option>
@@ -293,7 +293,9 @@
             </select>
           </div>
           <textarea name="observacoes" placeholder="Observações ou pedidos especiais..." rows="4"></textarea>
+          <p id="erro-reserva" class="erro-reserva" role="alert"></p>
           <button type="submit" class="botao-reserva">Confirmar Reserva</button>
+         
         </form>
       </div>
       <div id="modal" class="modal" hidden>
