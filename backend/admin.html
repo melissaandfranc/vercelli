@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Reservas – Vercelli</title>
+  <style>
+    body { font-family: 'Poppins', sans-serif; background: #F5EEDB; color: #444412; margin: 0; padding: 2rem; }
+    h1 { color: #950606; font-family: 'Times New Roman', serif; margin-bottom: 1rem; }
+    .barra { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; margin-bottom: 1rem; }
+    button { background: #950606; color: #F5EEDB; border: 0; border-radius: 4px; padding: .6rem 1rem; cursor: pointer; }
+    .tabela { overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; background: #FBF7EA; }
+    th, td { text-align: left; padding: .7rem 1rem; border-bottom: 1px solid #E8B96A; vertical-align: top; }
+    th { background: #444412; color: #F5EEDB; white-space: nowrap; }
+    a { color: #950606; }
+  </style>
+</head>
+<body>
+  <h1>Reservas</h1>
+
+  <div class="barra">
+    <label><input type="checkbox" id="so-futuras" checked> Só de hoje em diante</label>
+    <button id="atualizar" type="button">Atualizar</button>
+    <span id="resumo"></span>
+  </div>
+
+  <div class="tabela">
+    <table>
+      <thead>
+        <tr><th>Data</th><th>Pessoas</th><th>Nome</th><th>Telefone</th><th>Observações</th><th>Recebida em</th></tr>
+      </thead>
+      <tbody id="lista"></tbody>
+    </table>
+  </div>
+
+  <script>
+    const lista = document.getElementById("lista");
+    const resumo = document.getElementById("resumo");
+    const soFuturas = document.getElementById("so-futuras");
+    let reservas = [];
+
+    function dataBR(iso) {
+      const [a, m, d] = iso.split("-");
+      return d + "/" + m + "/" + a;
+    }
+
+    function fone(t) {
+      return t.length === 11
+        ? "(" + t.slice(0, 2) + ") " + t.slice(2, 7) + "-" + t.slice(7)
+        : "(" + t.slice(0, 2) + ") " + t.slice(2, 6) + "-" + t.slice(6);
+    }
+
+    function recebidaEm(utc) {
+      return new Date(utc.replace(" ", "T") + "Z")
+        .toLocaleString("pt-BR", { timeZone: "America/Sao_Paulo" });
+    }
+
+    function celula(tr, texto) {
+      const td = document.createElement("td");
+      td.textContent = texto;   // textContent: nunca interpreta HTML vindo do cliente
+      tr.appendChild(td);
+      return td;
+    }
+
+    function desenhar() {
+      const hoje = new Date().toLocaleDateString("sv-SE", { timeZone: "America/Sao_Paulo" });
+      const visiveis = reservas.filter(function (r) { return !soFuturas.checked || r.data >= hoje; });
+
+      lista.replaceChildren();
+      visiveis.forEach(function (r) {
+        const tr = document.createElement("tr");
+        celula(tr, dataBR(r.data));
+        celula(tr, r.pessoas);
+        celula(tr, r.nome);
+
+        const tdFone = celula(tr, "");
+        const link = document.createElement("a");
+        link.href = "https://wa.me/55" + r.telefone;
+        link.target = "_blank";
+        link.rel = "noopener";
+        link.textContent = fone(r.telefone);
+        tdFone.appendChild(link);
+
+        celula(tr, r.observacoes);
+        celula(tr, recebidaEm(r.criada_em));
+        lista.appendChild(tr);
+      });
+
+      resumo.textContent = visiveis.length + " reserva(s)";
+    }
+
+    async function carregar() {
+      resumo.textContent = "Carregando...";
+      try {
+        const resposta = await fetch("/api/admin/reservas");
+        if (!resposta.ok) throw new Error("falha");
+        reservas = await resposta.json();
+        desenhar();
+      } catch (e) {
+        resumo.textContent = "Não foi possível carregar as reservas.";
+      }
+    }
+
+    soFuturas.addEventListener("change", desenhar);
+    document.getElementById("atualizar").addEventListener("click", carregar);
+    carregar();
+  </script>
+</body>
+</html>
